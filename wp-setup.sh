@@ -27,7 +27,7 @@ sudo wget https://wordpress.org/latest.zip
 sudo apt-get install unzip -y
 sudo unzip latest.zip
 cd /var/www/html
-mkdir $URL
+sudo mkdir $URL
 sudo mv /var/www/html/temp/wordpress/* /var/www/html/$URL
 cd /var/www/html/
 sudo rm -rf temp
