@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+    ServerAdmin template.email
+
+    ServerName template.url
+    ServerAlias www.template.url
+    DocumentRoot template.docroot
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    <Directory template.docroot/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Order allow,deny
+        allow from All
+    </Directory>
+
+    ErrorLog template.logroot/error.log
+    LogLevel warn
+    CustomLog template.logroot/access.log combined
+</VirtualHost>
